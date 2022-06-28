@@ -24,7 +24,24 @@ window.onload = function(){
    }
    
 }
-</script><script type="text/javascript" src="js/clock.js"></script>
+</script>
+<script>
+window.onload = function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clocker').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+</script>
 
     </head>
     <body class="sb-nav-fixed bg-dark">
@@ -37,7 +54,7 @@ window.onload = function(){
             
             
             
-        <div onload="startTime()" class="navbar-brand ps-3 ms-auto  my-md-0"><spam id="clocker"></spam></div></nav>
+        <div class="navbar-brand ps-3 ms-auto  my-md-0"><spam id="clocker">00:00:00</spam></div></nav>
         <div id="layoutSidenav">
             
             <div style="
