@@ -270,7 +270,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 	width: 464px;
 	float: left;
 	bottom: 0;
-	left: 0;
+	left: 7px;
 	margin-top: 57px;
 	background: #222222;
 	border: 2px solid #000000;
